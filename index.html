@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tumblr OAuth Redirect</title>
+  </head>
+  <body>
+    <p>Finishing Tumblr login… you can return to TumblrPics.</p>
+    <script>
+      (function() {
+        // Preserve query string and hash when bouncing to the app
+        var qs = window.location.search || "";
+        var hash = window.location.hash || "";
+        var target = "tumblrpics://auth" + qs + hash;
+        window.location.replace(target);
+      })();
+    </script>
+  </body>
+</html>
